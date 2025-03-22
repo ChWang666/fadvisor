@@ -110,8 +110,8 @@ func (o *Options) AddFlags(flags *pflag.FlagSet) {
 
 	flags.StringVar(&o.CustomPrice.Description, "custom-price-desc", "default pricing", "custom pricing config description")
 	flags.StringVar(&o.CustomPrice.Provider, "custom-price-provider", "default", "custom pricing config provider")
-	flags.Float64Var(&o.CustomPrice.CpuHourlyPrice, "custom-price-cpu", 0.031611, "cpu hourly unit price of one core")
-	flags.Float64Var(&o.CustomPrice.RamGBHourlyPrice, "custom-price-ram", 0.004237, "ram gb hourly unit price")
+	flags.Float64Var(&o.CustomPrice.CpuHourlyPrice, "custom-price-cpu", 1, "cpu hourly unit price of one core")
+	flags.Float64Var(&o.CustomPrice.RamGBHourlyPrice, "custom-price-ram", 1, "ram gb hourly unit price")
 
 	flags.BoolVar(&o.ComparatorMode, "comparator-mode", false, "run as fadvisor cost comparator mode, it is an offline analysis tool")
 	o.ComparatorOptions.AddFlags(flags)
